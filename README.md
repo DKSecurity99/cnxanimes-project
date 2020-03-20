@@ -1,1 +1,1 @@
-# cnxanimes-project
+# Cnxanimes-project
