@@ -1,0 +1,451 @@
+/* Reset da pagina */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html { scroll-behavior:smooth; } 
+
+body { 
+	font-size: 100%;
+	font-family: 'Source Code Pro', monospace;
+}
+
+a { text-decoration: none; }
+
+p { line-height: 1.4; }
+
+img { display: block; }
+
+h1, h2, h3, h4 { 
+	font-family: 'Girassol', cursive;
+	font-weight: 300;	
+}
+
+/* Classes globais */
+.title--divisior::after {
+	content: "";
+	width: 60px;
+	height: 2px;
+	background: #ffca71;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	margin-left: 10px;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.title {
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 60px;
+	position: relative;
+}
+
+@media (min-width: 740px) and (max-width:980px){
+	.container { width: 720px; }
+	.title { font-size: 2.3rem; }
+}
+
+@media (max-width: 739px){
+	.container { width: 340px; }
+	.title { font-size: 2rem; }
+	.title--divisior::after { width: 40px; }
+}
+
+/* Header da pagina */
+.header {
+	padding: 15px 0;
+	background: #0099d0;
+	box-shadow: 0px 4px 5px rgba(0,0,0,.23);
+}
+
+.header h1 a {
+	font-size: 3rem;
+	letter-spacing: 1px;
+	color: #edf6f9;
+	margin-left: 10px;
+}
+
+.header h1 a span {
+	font-size: 2.5rem;
+	color: #ee9900;
+}
+
+.header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.header__menu { margin-right: 10px; }
+
+.header__menu a {
+	font-size: 1.2rem;
+	font-weight: 400;
+	text-align: center;
+	text-transform:uppercase;
+	letter-spacing: 1px;
+	display: inline-block;
+	border-radius: 10px;
+}
+
+.header__menu a:nth-child(1) { 
+	max-width: 200px;
+	margin-right: 10px; 
+	padding: 10px;
+	background: #cad4d8;
+	color: #002833;
+}
+
+.header__menu a:nth-child(2) {
+	padding: 10px;
+	background: #ffaa44;
+	max-width: 120px;
+	color: #001111;
+}
+
+.header__menu a:nth-child(1):hover { background: #effbff; }
+.header__menu a:nth-child(2):hover { background: #ffca71; }
+
+@media (max-width: 739px){
+	.header { padding: 10px 0; }
+	.header h1 a, .header__menu { margin: 0; }
+	.header__menu a { font-size: 1rem; }	
+	.header__container { justify-content: center; }
+}
+
+/* Header das subs pages */
+.header__title-center { text-align: center; }
+
+/* Carrousel da pagina */
+.carrousel {
+	height: 600px;
+	position:relative;
+	background: center center/cover;
+	display: flex;
+	align-items: center;
+}
+
+.carrousel__container {
+	max-width: 480px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+.carrousel__container h2 {
+	font-size: 4rem;
+	color: #edf6f9;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1.4px;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+
+[data-js="title"].remove-title {
+	display: none;
+}
+
+.carrousel__container p {
+	font-size: 1.2rem;
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #edf6f9;
+}
+
+.carrousel__spiner {
+	position: absolute;
+	bottom: 15px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #cad4d8;
+}
+
+.spiner-1 { left:47%; }
+.spiner-2 { left:50%; }
+.spiner-3 { left:53%; }
+
+.carrousel__spiner.spiner-active { background: #ffaa44; }
+
+@media (min-width: 740px) and (max-width:980px){
+	.carrousel { height: 500px; }
+	.carrousel__container h2 { font-size: 3.5rem; }
+}
+
+@media (max-width: 739px){
+	.carrousel { height: 460px; }
+	.carrousel__container h2 { font-size: 2.75rem; }
+	.carrousel__container p { font-size: 1rem; }
+}
+/* About da pagina */
+.about {
+	padding: 60px 0;
+	background: #011;
+	position: relative;
+	border-top: 1px solid #011;
+}
+
+.about h2 { color: #edf6f9; }
+
+.about__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.about__content {
+	width: 460px;
+	margin: 0 auto;
+}
+
+.about__content p {
+	text-align: center;
+	max-width: 100%;
+	font-size: 1.2rem;
+	color: #edf6f9;
+}
+
+.about__bg {
+	width: 260px;
+	height: 260px;
+	background: url("../img/bg/bg-icon-3.png") center/cover;
+}
+
+@media (min-width: 740px) and (max-width:980px){
+	.about { padding: 40px 0; }
+	.about__content { width: 340px; }
+	.about__bg { 
+		width: 240px;
+		height: 240px;
+	}
+}
+
+@media (max-width: 739px){
+	.about { padding: 30px 0; }
+	.about__content { 
+		width: 340px;
+		margin-bottom: 15px;	
+	}
+	.about__content p { font-size: 1rem; }
+	.about__container { flex-direction: column-reverse; }
+
+	.about h2.title--divisior::after { display: none; }
+
+}
+
+/* Animes episodios */
+.anime {
+	padding: 60px 0;
+	background: #edf6f9;	
+}
+
+.anime__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}	
+
+.anime__card {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.anime__card h3 {
+	flex-basis: 100%;
+	margin: 30px 0 30px 10px;
+	font-size: 1.75rem;
+	text-transform: uppercase;
+	color: #0099d0;
+	position: relative;
+}
+
+.anime__content {
+	width: 220px;
+	margin: 0 10px 60px 10px;
+	background: #002833;
+}
+
+.nanatsu > .anime__content { margin-bottom: 0; }
+
+.anime__content h4 {
+	color: #edf6f9;	
+	text-align: center;
+	font-size: 1rem;
+	font-weight: normal;
+	margin: 15px 0;
+}
+
+.anime__content h4::after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #6df;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.anime__content:hover h4::after { background: #ffca71; }
+
+.anime__btn {
+	display: block;
+	font-size: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 10px 0;
+	background: #ffca71;
+	color: #002833;
+	letter-spacing: 1px;
+}
+
+.anime__btn:hover { background: #6df; }
+
+.nanatsu { margin-bottom: 0; }
+
+.anime__img { width: 220px; }
+
+.anime__img img { width: 100%; }
+
+@media (min-width: 740px) and (max-width:980px){
+	.anime { padding: 40px 0; }
+	.anime__content, .anime__img { width: 340px; }
+	.nanatsu > .anime__content, .anime__content { margin-bottom: 30px; }
+}
+
+@media (max-width: 739px){
+	.anime { padding: 30px 0; }
+	.anime__content, .anime__img { width: 340px; }
+	.nanatsu > .anime__content, .anime__content { margin: 0  0 20px 0; }
+}
+/* Cadastro rapido na pagina */
+.login {
+	padding: 60px 0;
+	background: #0099d0;
+}
+
+.login__container { 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.login__container a {
+	display: block;
+	padding: 20px 10px;
+	width: 420px;
+	border-radius: 10px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.75rem;
+	text-transform: uppercase;
+	color: #edf6f9;
+	font-weight: 900;
+	letter-spacing: 1px;
+	background: #fa4;
+	position: relative;
+	transition: all .5s linear;
+}
+
+.login__container a::before,
+.login__container a::after {
+	content: '';
+	width: 2rem;
+	height: 2rem;
+	display: block;
+	position: absolute;
+	transition: all .5s linear;
+}
+
+.login__container a::before {
+	top: -.800rem;
+	left: -.800rem;
+	border-top: 5px solid #fa4;
+	border-left: 5px solid #fa4;
+}
+
+.login__container a::after {
+	right: -.800rem;
+	bottom: -.800rem;
+	border-right: 5px solid #fa4;
+	border-bottom: 5px solid #fa4;
+}
+
+.login__container a:hover::before,
+.login__container a:hover::after {
+ 	width: calc(100% + 1.3rem);
+ 	height: calc(100% + 1.3rem);
+}
+
+.login h2 {
+	color: #edf6f9;
+	position: relative;
+}
+
+.login__bg {
+	width: 240px;
+	height: 240px;
+	background: url("../img/bg/bg-icon-1.png") center/cover;
+}
+
+@media (min-width: 740px) and (max-width:980px){
+	.login { padding: 40px 0; }
+	.login__container a { width: 400px; }
+}
+
+@media (max-width: 739px){
+	.login { padding: 30px 0; }
+	.login__container { justify-content: center; }
+	.login__container a { 
+		width: 300px;
+		margin: 0  0 30px 0; 
+		padding: 15px 10px;
+		font-size: 1.2rem;
+	}
+	
+	.login__bg {
+		width: 220px;
+		height: 220px;
+	}
+	
+	.login h2::after {
+		width: 40px;
+	}
+	
+	.login__container a::before {
+		top: -.500rem;
+		left: -.500rem;
+		border-top: 3px solid #fa4;
+		border-left: 3px solid #fa4;
+	}
+	
+	.login__container a::after {
+		right: -.500rem;
+		bottom: -.500rem;
+		border-right: 3px solid #fa4;
+		border-bottom: 3px solid #fa4;
+	}
+	
+	.login__container a:hover::before,
+	.login__container a:hover::after {
+		width: calc(100% + .800rem);
+		height: calc(100% + .800rem);
+	}
+	
+}

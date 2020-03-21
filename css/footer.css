@@ -1,0 +1,70 @@
+/* Footer da pagina */
+.footer {
+	padding: 60px 0;
+	background: #011;
+}
+.footer--form { background: #0099d0; }
+.footer__container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer__lista h3 {
+	font-size: 1.5rem;
+	color: #edf6f9;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.footer__lista ul {
+	list-style: none;
+}
+
+.footer__lista ul li a {
+	display: block;
+	font-size: 1.2rem;
+	color: #6df;	
+	margin-bottom: 10px;
+	text-decoration: underline;
+}
+
+.footer--form ul li  a,
+.footer--form.footer p a { color: #ffca71; }
+
+a.link--active-2 { color: #011 !important; }
+a.link--active-1 { color: #59cf12 !important; }
+
+.footer h5 {
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: normal;
+	color: #edf6f9;
+	margin: 30px 0 0 0;
+}
+
+.footer p {
+	font-size: 1.2rem;
+	text-align: center;
+	color: #edf6f9;
+	margin: 15px 0;
+}
+
+.footer p a {
+	color: #6df;
+	text-decoration: underline;
+}
+
+.footer p:last-child { margin: 0; }
+
+@media (min-width: 740px) and (max-width:980px){
+	.footer { padding: 40px 0; }
+}
+
+@media (max-width: 739px){
+	.footer { padding: 30px 0; }
+	.footer__lista h3 { font-size: 1.2rem; }
+	.footer__lista ul li a,
+	.footer p,
+	.footer h5 { font-size: 1rem; }
+}

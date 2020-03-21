@@ -1,0 +1,220 @@
+body { background: #011; }
+
+.formulario {
+	margin: 60px auto;
+}
+
+.formulario h2 { 
+	text-transform: uppercase;
+	color: #edf6f9;
+}
+
+.formulario__form {
+	width: 460px;
+	margin: 0 auto;
+	background: #effbff;
+	padding: 30px 0;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	box-shadow:  4px 4px 5px rgba(0,0,0,.21);
+	position: relative; 
+}
+
+.formulario__icons {
+	flex-basis: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	border-bottom: 1px solid #cad4d8;
+}
+
+.formulario__container-bg {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.formulario__bg,
+.formulario__bg-l {
+	width: 340px;
+	height: 380px;
+	margin: 60px 0 0 30px;
+}
+
+.formulario__bg { background: url("../img/bg/bg-icon-5.png") center/cover; }
+.formulario__bg-l { background: url("../img/bg/bg-icon-4.png") center/cover; }
+
+.formulario__content {
+	width: 460px;
+}
+
+.formulario__content p {
+	font-size: 1.2rem;
+	text-align: center;
+	margin-right: 30px;
+	color: #edf6f9;
+}
+
+
+.formulario__icons a {
+	display: inline-block;
+	width: 210px;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 1.2rem;
+	color: #effbff;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+.formulario__icons a img {
+	width: 35px;
+	display: inline-block;
+}
+
+.formulario__icons a:nth-child(1) { 
+	background: #ea3a00;
+	margin-right: 15px;
+} 
+
+.formulario__icons a:nth-child(2) { background: #0059B1; } 
+
+.formulario__icons a:hover:nth-child(1) { background: rgba(234,58,0,.8);}
+.formulario__icons a:hover:nth-child(2) { background: rgba(0,89,177,.8);}
+
+.formulario__form label {
+	align-self: flex-start;
+	margin: 30px 0 15px 20px;
+	font-size: 1.2rem;
+	position: relative;
+}
+
+.formulario__form input,
+.formulario__form  button {
+	width: 420px;
+	margin: 0 auto;
+	padding: 15px;
+	outline: none;
+	border-radius: 10px;
+	font-family: 'Source Code Pro', monospace;
+}
+
+.formulario__form input {
+	border: 2px solid #6df;
+	font-size: 1rem;
+	background: #fff;
+}
+
+.formulario__form button {
+	border: none;
+	margin-top: 30px;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	background: #fa4;
+	color: #edf6f9;
+	font-weight: 800;
+	letter-spacing: 1px;
+}
+
+.formulario__form button:hover { background: #ffca71; }
+
+.formulario__form input::placeholder { color: gray; }
+
+.formulario__form label > a {
+	color: #0099d0;
+	text-decoration: underline;
+	margin-left: 10px;
+}
+
+.formulario__form input[type="password"] { padding-right: 60px; }
+
+.formulario__eye {
+	position: absolute;
+	top: 66%;
+	right: 30px;
+}
+
+.formulario__eye-l { top: 59%; }
+
+.formulario__eye i {
+	font-size: 1.5rem;
+	color: #fa4;
+	cursor: pointer;
+}
+
+.formulario__eye i.hideEye::before { content: '\f070'; }
+
+@media (min-width: 740px) and (max-width:980px){
+	.formulario__container-bg { max-width: 720px;}
+	.formulario__bg,
+	.formulario__bg-l { 
+		width: 340px;
+		height: 340px;
+	}
+	
+	.formulario__content { width: 340px;}
+}
+
+@media (max-width: 739px){
+	.formulario__form {
+		width: 340px;
+		padding: 10px 0;
+	}
+	
+	.formulario__container-bg { 
+		justify-content: center;
+		max-width: 340px;	
+	}
+	.formulario__content { width: 340px; }
+	
+	.formulario__bg,
+	.formulario__bg-l { 
+		width: 260px;
+		height: 260px;
+		margin: 30px 0 0 0;
+	}
+	
+	.formulario__content p { 
+		font-size: 1rem;
+		margin: 30px 0 0 0;
+	}
+	
+	
+	.formulario__form input,
+	.formulario__form  button { 
+		width: 320px; 
+		padding: 10px;
+	}
+	
+	.formulario__form input { font-size: .875rem; }
+	.formulario__form button { font-size: 1.2rem; }	
+	.formulario__form input[type="password"] { padding-right: 60px; }
+	
+	.formulario__form label {
+		margin: 15px 0 10px 10px;
+		font-size: 1rem;
+	}
+
+	.formulario__icons a { 
+		width: 150px;
+		margin-bottom: 10px;
+	}
+	
+	.formulario__icons a img { width: 30px; }
+	
+	.formulario__eye { 
+		top: 65%;
+		right: 27px;
+	}
+	
+	.formulario__eye-l { top: 58%; }
+	.formulario__eye i { font-size: 1.2rem; }
+}
